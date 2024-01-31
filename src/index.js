@@ -26,7 +26,7 @@ app.get('/stream', async (c) => {
 	]
 
 	const aiResponse = await ai.run(
-		'@cf/meta/llama-2-7b-chat-int8',
+		'@cf/mistral/mistral-7b-instruct-v0.1',
 		{messages, stream:true}
 	)
 	return new Response(aiResponse, {
